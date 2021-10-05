@@ -5,36 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/5a20824a9d.js"
       crossorigin="anonymous"
     ></script>
-    <title>Verificar Cartão de Crédito</title>
+    <title>Luhn Algorithm - Validate</title>
   </head>
   <body>
-    <header class="header">
-      <h1>Verificar Cartão de Crédito</h1>
+    <header>
+      <div class="header-container">
+        <h1>Luhn Algorithm Validate</h1>
+      </div>
     </header>
     <main>
       <div class="container">
         <div class="content">
-          <div class="legend">digits</div>
+          <div class="legend">números</div>
           <textarea
             name="digits-textarea-in"
             id="digits-textarea-in"
             cols="63"
             rows="10"
-            placeholder="4535902266467714, 4535904589756547, 4535978965478518, "
+            placeholder="4535902266467714, 4535904589756547, 4535978965478518"
             onkeypress="return onlyKeysAllowed(event)"
             onkeyup="prepareTextarea(this)"
           ></textarea>
         </div>
 
         <div class="content result-container">
-          <div class="legend">resultado</div>
+          <div class="legend">resultados</div>
           <div id="results" class="result-content"></div>
         </div>
       </div>
@@ -46,13 +51,17 @@
     <footer class="footer">
       <ul class="social-midia">
         <li class="item-social">
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/jardson_eu/"><i class="fab fa-instagram"></i></a>
         </li>
         <li class="item-social">
-          <a href="https://www.github.com/jcs-eu"><i class="fab fa-github"></i></a>
+          <a href="https://www.github.com/jcs-eu/"
+            ><i class="fab fa-github"></i
+          ></a>
         </li>
         <li class="item-social">
-          <a href="https://www.linkedin.com/in/jardson-costa/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/jardson-costa/"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
         </li>
       </ul>
       <div class="author">

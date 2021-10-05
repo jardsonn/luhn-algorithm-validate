@@ -8,15 +8,15 @@ function digitValidity(digit, isValid) {
 
 function prepareTextarea(e) {
   const value = e.value;
-  const charNotAllowed = /[^0-9,| ]/g;
+  const charAllowed = /[^0-9,| ]/g;
   if (value.trim().length == 0) {
     btnVerify.disabled = true;
     results.innerHTML = "";
   }else{
     btnVerify.disabled = false;
   }
-  if (charNotAllowed.test(value)) {
-    e.value = value.replace(charNotAllowed, "");
+  if (charAllowed.test(value)) {
+    e.value = value.replace(charAllowed, "");
   }
 }
 
@@ -50,12 +50,10 @@ function luhnAlgorithm(credCard) {
 }
 
 function setValidity(credCard) {
-  // const allCC = credCard.split(",");
   let allCC = credCard.split(/[^0-9 ]/g);
   allCC = allCC.filter((s) => /\S/.test(s)); // remove whitespace
 
   let result = "";
-  console.log(allCC);
   allCC.forEach((cc) => {
     const numberCC = cc.trim();
     const isValid = luhnAlgorithm(numberCC);
